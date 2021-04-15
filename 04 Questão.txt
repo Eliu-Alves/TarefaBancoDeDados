@@ -1,0 +1,15 @@
+Select A.Codigo, A.Nome, COUNT(D.Nome)
+from Turma AS T
+
+INNER JOIN Professor AS P
+ON T.PROFESSOR = P.Codigo
+    
+INNER JOIN Diciplina AS D
+ON T.DICIPLINA= D.Codigo,
+
+INNER JOIN ALUNO AS A
+ON T.Codigo = A.Codigo	
+
+GROUP BY email
+HAVING COUNT(email) > 1
+

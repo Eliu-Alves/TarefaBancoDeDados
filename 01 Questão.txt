@@ -1,0 +1,15 @@
+Select T.Codigo, P.Nome, D.Nome
+from Turma AS T
+
+INNER JOIN Professor AS P
+ON T.PROFESSOR = P.Codigo
+    
+INNER JOIN Diciplina AS D
+ON T.DICIPLINA= D.Codigo,
+
+INNER JOIN ALUNO AS A
+ON T.Codigo = A.Codigo	
+
+where T.DataInicio between = '2009' and '2010'
+and A.NOME  = 4
+

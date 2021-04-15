@@ -1,0 +1,14 @@
+Select P.Nome, D.Nome, T.dataInicio, T.dataTermino
+
+from Turma as T
+
+INNER JOIN Professor AS P
+ON T.PROFESSOR = P.Codigo
+    
+INNER JOIN Diciplina AS D
+ON T.DICIPLINA= D.Codigo,
+
+INNER JOIN MATRICULADO AS M
+ON T.Codigo = M.Codigo	
+
+where M.ALUNO = null
