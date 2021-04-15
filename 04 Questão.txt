@@ -10,6 +10,6 @@ ON T.DICIPLINA= D.Codigo,
 INNER JOIN ALUNO AS A
 ON T.Codigo = A.Codigo	
 
-GROUP BY email
-HAVING COUNT(email) > 1
+GROUP BY D.Nome
+HAVING COUNT(D.Nome) > 1
 
